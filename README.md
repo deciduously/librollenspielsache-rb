@@ -1,5 +1,9 @@
 # Librollenspielsache-rb
 
+WIP - there's like nothing actually here yet.
+
+![Gem](https://img.shields.io/gem/v/librollenspielsache-rb)
+
 Ruby bindings for [`librollenspielsache`](https://crates.io/crates/librollenspielsache).
 
 ## Installation
@@ -23,7 +27,7 @@ Or install it yourself as:
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests or `rake lint` to run RuboCop. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 For now, this expects a pre-compiled `librollenspielsache.so` available in `ext/`.  One is provided with the repo.
 
@@ -31,5 +35,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/librollenspielsache-rb.
+Bug reports and pull requests are welcome on GitHub at https://github.com/deciduously/librollenspielsache-rb.
 

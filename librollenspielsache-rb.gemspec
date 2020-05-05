@@ -8,16 +8,16 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Ben Lovy']
   spec.email         = ['ben@deciduously.com']
 
-  spec.summary       = 'Ruby binding for librolenspiesache'
-  spec.description   = 'Complete Ruby-idiomatic wrapper for librollenspielsache'
-  spec.homepage      = 'https://github.com/deciduously/librollenspielsache-rb'
+  spec.summary       = 'Ruby binding for librolenspiesache.'
+  spec.description   = "Complete Ruby-idiomatic wrapper for librollenspielsache.  WIP - there's very little to the underlying binding, and as such, very little here.  Version numbers for both should remain in sync, and this won't be \"usable\" until 1.0."
+  spec.homepage      = 'https://rubygems.org/gems/librollenspielsache-rb'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/deciduously/librollenspielsache-rb'
-  # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata['changelog_uri'] = 'https://github.com/deciduously/librollenspielsache-rb/blob/master/CHANGELOG.md'
 
   # spec.add_dependency 'dotenv'
   spec.add_dependency 'ffi'
