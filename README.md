@@ -1,5 +1,7 @@
 # Librollenspielsache-rb
 
+![Gem](https://img.shields.io/gem/v/librollenspielsache-rb)
+
 Ruby bindings for [`librollenspielsache`](https://crates.io/crates/librollenspielsache).
 
 ## Installation
