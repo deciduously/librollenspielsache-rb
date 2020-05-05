@@ -4,7 +4,7 @@ require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 
-ENV["LD_LIBRARY_PATH"] = 'ext'
+ENV['LD_LIBRARY_PATH'] = 'ext'
 
 RSpec::Core::RakeTask.new(:spec)
 
