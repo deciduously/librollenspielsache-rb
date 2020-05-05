@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
 require 'bundler/gem_tasks'
-require 'dotenv/load'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 
-# Load LD_LIBRARY_PATH
-Dotenv.load
+ENV["LD_LIBRARY_PATH"] = 'ext'
 
 RSpec::Core::RakeTask.new(:spec)
 
