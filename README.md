@@ -1,5 +1,7 @@
 # Librollenspielsache-rb
 
+WIP - there's like nothing actually here yet.
+
 ![Gem](https://img.shields.io/gem/v/librollenspielsache-rb)
 
 Ruby bindings for [`librollenspielsache`](https://crates.io/crates/librollenspielsache).
