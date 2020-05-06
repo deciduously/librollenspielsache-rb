@@ -4,7 +4,7 @@ WIP - there's like nothing actually here yet.
 
 Currently wrapping [librollenspielsache 0.1.2](https://crates.io/crates/librollenspielsache/0.1.2).
 
-![Gem](https://img.shields.io/gem/v/librollenspielsache-rb)
+[![Gem](https://img.shields.io/gem/v/librollenspielsache-rb)](https://rubygems.org/gems/librollenspielsache-rb)
 
 Ruby bindings for [`librollenspielsache`](https://crates.io/crates/librollenspielsache).
 
