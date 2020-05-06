@@ -1,6 +1,8 @@
-# Librollenspielsache-rb
+# Rollenspielsache-rb
 
 WIP - there's like nothing actually here yet.
+
+Currently wrapping [librollenspielsache 0.1.2](https://crates.io/crates/librollenspielsache/0.1.2).
 
 ![Gem](https://img.shields.io/gem/v/librollenspielsache-rb)
 
@@ -24,8 +26,21 @@ Or install it yourself as:
 
 ## Usage
 
+Coming soon?
 
 ## Development
+
+### Prerequisites
+
+Before using you need to download and successfully run `make all` in [`librollenspielsache`](https://github.com/deciduously/librollenspielsache).  Then, you need to add a file in this project root called `.env` with the following contents:
+
+```
+LD_LIBRARY_PATH="${HOME}/path/to/librollenspielsache/dist"
+```
+
+Adjust to where you build the shared library.
+
+### Run
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests or `rake lint` to run RuboCop. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 

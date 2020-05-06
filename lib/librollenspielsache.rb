@@ -5,6 +5,6 @@ require 'librollenspielsache/dice/roll'
 require 'librollenspielsache/dice/roll_result'
 require 'librollenspielsache/version'
 
-module Librollenspielsache
+module Rollenspielsache
   class Error < StandardError; end
 end
