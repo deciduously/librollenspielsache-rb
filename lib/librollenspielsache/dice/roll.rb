@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-module Librollenspielsache
+require_relative 'roll_result'
+
+module Rollenspielsache
   module Dice
     # A single roll
     class Roll < FFI::AutoPointer
@@ -28,6 +30,7 @@ module Librollenspielsache
 
       # Rust exported fns
       module Binding
+        include Rollenspielsache::Dice
         extend FFI::Library
         ffi_lib 'librollenspielsache'
 
@@ -36,7 +39,7 @@ module Librollenspielsache
         # Free the object
         attach_function :free, :roll_free, [], :void
         # Returns a pointer to RollResult
-        attach_function :execute, :roll_execute, [Roll], :pointer
+        attach_function :execute, :roll_execute, [Roll], Dice::RollResult
         # Get the base
         attach_function :get_base, :roll_base, [Roll], :int
         # Get the repeat
