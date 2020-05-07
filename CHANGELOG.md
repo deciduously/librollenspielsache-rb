@@ -4,6 +4,7 @@ I was premature in jumping to 0.1.  **This is the only working version of 0.1**.
 
 * Bump Rust lib
 * Add more tests
+* JSON RollResult
 
 # 0.1.0
 

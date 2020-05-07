@@ -2,7 +2,7 @@
 
 require 'json'
 
-TEST_REPS = 200
+TEST_REPS = 50
 
 RSpec.describe Rollenspielsache::Dice do
   it 'obtains a roll from a string' do

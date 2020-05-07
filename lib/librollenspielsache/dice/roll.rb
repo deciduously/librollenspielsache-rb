@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'roll_result'
+require_relative '../ffi_string'
 
 module Rollenspielsache
   module Dice
@@ -28,8 +29,13 @@ module Rollenspielsache
         Binding.get_repeat self
       end
 
+      def to_s
+        Binding.to_string self
+      end
+
       # Rust exported fns
       module Binding
+        include Rollenspielsache
         include Rollenspielsache::Dice
         extend FFI::Library
         ffi_lib 'librollenspielsache'
@@ -40,6 +46,8 @@ module Rollenspielsache
         attach_function :free, :roll_free, [], :void
         # Returns a pointer to RollResult
         attach_function :execute, :roll_execute, [Roll], Dice::RollResult
+        # Get the string
+        attach_function :to_string, :roll_from_str, [Roll], FFIString
         # Get the base
         attach_function :get_base, :roll_base, [Roll], :int
         # Get the repeat

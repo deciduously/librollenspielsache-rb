@@ -17,8 +17,7 @@ module Rollenspielsache
       end
 
       def to_s
-        wrap = Binding.to_string self
-        wrap.to_s
+        Binding.to_string self
       end
 
       def total
@@ -34,7 +33,7 @@ module Rollenspielsache
         # Rust `to_json()`
         attach_function :to_json, :roll_result_to_json, [RollResult], FFIString
         # Rust `to_string()`
-        attach_function :to_s, :roll_result_to_string, [RollResult], FFIString
+        attach_function :to_string, :roll_result_to_string, [RollResult], FFIString
         # It comes back as a base and modifier, total combines them
         attach_function :total, :roll_result_total, [RollResult], :int
         # Pass back to Rust memory management
