@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'ffi'
+require_relative '../ffi_string'
 
 module Rollenspielsache
   module Dice
@@ -10,8 +11,14 @@ module Rollenspielsache
         Binding.free ptr
       end
 
+      def to_json(_optional = nil)
+        wrap = Binding.to_json self
+        wrap.to_s
+      end
+
       def to_s
-        Binding.to_s self
+        wrap = Binding.to_string self
+        wrap.to_s
       end
 
       def total
@@ -20,15 +27,18 @@ module Rollenspielsache
 
       # Rust externs
       module Binding
+        include Rollenspielsache
         extend FFI::Library
         ffi_lib 'librollenspielsache'
 
+        # Rust `to_json()`
+        attach_function :to_json, :roll_result_to_json, [RollResult], FFIString
         # Rust `to_string()`
-        attach_function :to_s, :roll_result_to_string, [:pointer], :string
+        attach_function :to_s, :roll_result_to_string, [RollResult], FFIString
         # It comes back as a base and modifier, total combines them
-        attach_function :total, :roll_result_total, [:pointer], :int
+        attach_function :total, :roll_result_total, [RollResult], :int
         # Pass back to Rust memory management
-        attach_function :free, :roll_result_free, [:pointer], :void
+        attach_function :free, :roll_result_free, [RollResult], :void
       end
     end
   end
