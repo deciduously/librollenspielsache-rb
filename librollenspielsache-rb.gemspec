@@ -4,7 +4,7 @@ require_relative 'lib/librollenspielsache/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'librollenspielsache-rb'
-  spec.version       = Librollenspielsache::VERSION
+  spec.version       = Rollenspielsache::VERSION
   spec.authors       = ['Ben Lovy']
   spec.email         = ['ben@deciduously.com']
 
@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
   spec.metadata['source_code_uri'] = 'https://github.com/deciduously/librollenspielsache-rb'
   spec.metadata['changelog_uri'] = 'https://github.com/deciduously/librollenspielsache-rb/blob/master/CHANGELOG.md'
 
-  # spec.add_dependency 'dotenv'
   spec.add_dependency 'ffi'
 
   spec.add_development_dependency 'rubocop'

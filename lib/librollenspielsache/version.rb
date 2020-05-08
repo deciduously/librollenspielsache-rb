@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module Librollenspielsache
-  VERSION = '0.1.0'
+module Rollenspielsache
+  VERSION = '0.1.1'
 end
